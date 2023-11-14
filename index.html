@@ -35,19 +35,19 @@
         <script src="js/tailDT.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script src="js/wNumb.js"></script>
-        <script src="data/USStateBoundaries_0.js"></script>
+        <script src="data/California_0.js"></script>
         <script src="data/CaliforniaBusinessesbyEmployeeSize_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[30.429233621755255,-130.03970951792337],[42.84038936959209,-106.41470951792337]]);
+        }).fitBounds([[30.859973733003702,-132.52194066749075],[43.271129480840536,-108.89694066749075]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_USStateBoundaries_0(feature, layer) {
+        function pop_California_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -71,44 +71,44 @@
                         <td colspan="2">' + (feature.properties['SQMI'] !== null ? autolinker.link(feature.properties['SQMI'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Shape__Area'] !== null ? autolinker.link(feature.properties['Shape__Area'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Shape__Are'] !== null ? autolinker.link(feature.properties['Shape__Are'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Shape__Length'] !== null ? autolinker.link(feature.properties['Shape__Length'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Shape__Len'] !== null ? autolinker.link(feature.properties['Shape__Len'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_USStateBoundaries_0_0() {
+        function style_California_0_0() {
             return {
-                pane: 'pane_USStateBoundaries_0',
+                pane: 'pane_California_0',
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,1.0)',
                 interactive: false,
             }
         }
-        map.createPane('pane_USStateBoundaries_0');
-        map.getPane('pane_USStateBoundaries_0').style.zIndex = 400;
-        map.getPane('pane_USStateBoundaries_0').style['mix-blend-mode'] = 'normal';
-        var layer_USStateBoundaries_0 = new L.geoJson(json_USStateBoundaries_0, {
+        map.createPane('pane_California_0');
+        map.getPane('pane_California_0').style.zIndex = 400;
+        map.getPane('pane_California_0').style['mix-blend-mode'] = 'normal';
+        var layer_California_0 = new L.geoJson(json_California_0, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_USStateBoundaries_0',
-            layerName: 'layer_USStateBoundaries_0',
-            pane: 'pane_USStateBoundaries_0',
-            onEachFeature: pop_USStateBoundaries_0,
-            style: style_USStateBoundaries_0_0,
+            dataVar: 'json_California_0',
+            layerName: 'layer_California_0',
+            pane: 'pane_California_0',
+            onEachFeature: pop_California_0,
+            style: style_California_0_0,
         });
-        bounds_group.addLayer(layer_USStateBoundaries_0);
-        map.addLayer(layer_USStateBoundaries_0);
+        bounds_group.addLayer(layer_California_0);
+        map.addLayer(layer_California_0);
         function pop_CaliforniaBusinessesbyEmployeeSize_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -271,7 +271,7 @@
             };
             abstract.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'California Businesses by Employee Size<br /><table><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_121.png" /></td><td>1 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_242.png" /></td><td>2 - 4</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_4103.png" /></td><td>4 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_1014004.png" /></td><td>10 - 1400</td></tr></table>': layer_CaliforniaBusinessesbyEmployeeSize_1,'<img src="legend/USStateBoundaries_0.png" /> US State Boundaries': layer_USStateBoundaries_0,}).addTo(map);
+        L.control.layers(baseMaps,{'California Businesses by Employee Size<br /><table><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_121.png" /></td><td>1 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_242.png" /></td><td>2 - 4</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_4103.png" /></td><td>4 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesbyEmployeeSize_1_1014004.png" /></td><td>10 - 1400</td></tr></table>': layer_CaliforniaBusinessesbyEmployeeSize_1,'<img src="legend/California_0.png" /> California': layer_California_0,}).addTo(map);
         setBounds();
         var mapDiv = document.getElementById('map');
         var row = document.createElement('div');
@@ -292,7 +292,7 @@
         document.getElementById("all").appendChild(col1);
         document.getElementById("all").appendChild(col2);
         col1.appendChild(mapDiv)
-        var Filters = {"company_sa": "str","naics_desc": "str"};
+        var Filters = {"naics_desc": "str","company_sa": "str"};
         function filterFunc() {
           map.eachLayer(function(lyr){
           if ("options" in lyr && "dataVar" in lyr["options"]){
@@ -382,43 +382,6 @@
           }
           })
         }
-            document.getElementById("menu").appendChild(
-                document.createElement("div"));
-            var div_company_sa = document.createElement('div');
-            div_company_sa.id = "div_company_sa";
-            div_company_sa.className= "filterselect";
-            document.getElementById("menu").appendChild(div_company_sa);
-            sel_company_sa = document.createElement('select');
-            sel_company_sa.multiple = true;
-            sel_company_sa.size = 8;
-            sel_company_sa.id = "sel_company_sa";
-            var company_sa_options_str = "<option value='' unselected></option>";
-            sel_company_sa.onchange = function(){filterFunc()};
-            company_sa_options_str  += '<option value="$1,000,000 to $4,999,999">$1,000,000 to $4,999,999</option>';
-            company_sa_options_str  += '<option value="$10,000,000 to $24,999,999">$10,000,000 to $24,999,999</option>';
-            company_sa_options_str  += '<option value="$25,000,000 to $74,999,999">$25,000,000 to $74,999,999</option>';
-            company_sa_options_str  += '<option value="$5,000,000 to $9,999,999">$5,000,000 to $9,999,999</option>';
-            company_sa_options_str  += '<option value="$500,000 to $999,999">$500,000 to $999,999</option>';
-            company_sa_options_str  += '<option value="Over $1,000,000,000">Over $1,000,000,000</option>';
-            company_sa_options_str  += '<option value="Under $500,000">Under $500,000</option>';
-            company_sa_options_str  += '<option value="Unknown">Unknown</option>';
-            sel_company_sa.innerHTML = company_sa_options_str;
-            div_company_sa.appendChild(sel_company_sa);
-            var lab_company_sa = document.createElement('div');
-            lab_company_sa.innerHTML = 'company_sa';
-            lab_company_sa.className = 'filterlabel';
-            div_company_sa.appendChild(lab_company_sa);
-            var reset_company_sa = document.createElement('div');
-            reset_company_sa.innerHTML = 'clear filter';
-            reset_company_sa.className = 'filterlabel';
-            reset_company_sa.onclick = function() {
-                var options = document.getElementById("sel_company_sa").options;
-                for (var i=0; i < options.length; i++) {
-                    options[i].selected = false;
-                }
-                filterFunc();
-            };
-            div_company_sa.appendChild(reset_company_sa);
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
             var div_naics_desc = document.createElement('div');
@@ -550,6 +513,43 @@
                 filterFunc();
             };
             div_naics_desc.appendChild(reset_naics_desc);
+            document.getElementById("menu").appendChild(
+                document.createElement("div"));
+            var div_company_sa = document.createElement('div');
+            div_company_sa.id = "div_company_sa";
+            div_company_sa.className= "filterselect";
+            document.getElementById("menu").appendChild(div_company_sa);
+            sel_company_sa = document.createElement('select');
+            sel_company_sa.multiple = true;
+            sel_company_sa.size = 8;
+            sel_company_sa.id = "sel_company_sa";
+            var company_sa_options_str = "<option value='' unselected></option>";
+            sel_company_sa.onchange = function(){filterFunc()};
+            company_sa_options_str  += '<option value="$1,000,000 to $4,999,999">$1,000,000 to $4,999,999</option>';
+            company_sa_options_str  += '<option value="$10,000,000 to $24,999,999">$10,000,000 to $24,999,999</option>';
+            company_sa_options_str  += '<option value="$25,000,000 to $74,999,999">$25,000,000 to $74,999,999</option>';
+            company_sa_options_str  += '<option value="$5,000,000 to $9,999,999">$5,000,000 to $9,999,999</option>';
+            company_sa_options_str  += '<option value="$500,000 to $999,999">$500,000 to $999,999</option>';
+            company_sa_options_str  += '<option value="Over $1,000,000,000">Over $1,000,000,000</option>';
+            company_sa_options_str  += '<option value="Under $500,000">Under $500,000</option>';
+            company_sa_options_str  += '<option value="Unknown">Unknown</option>';
+            sel_company_sa.innerHTML = company_sa_options_str;
+            div_company_sa.appendChild(sel_company_sa);
+            var lab_company_sa = document.createElement('div');
+            lab_company_sa.innerHTML = 'company_sa';
+            lab_company_sa.className = 'filterlabel';
+            div_company_sa.appendChild(lab_company_sa);
+            var reset_company_sa = document.createElement('div');
+            reset_company_sa.innerHTML = 'clear filter';
+            reset_company_sa.className = 'filterlabel';
+            reset_company_sa.onclick = function() {
+                var options = document.getElementById("sel_company_sa").options;
+                for (var i=0; i < options.length; i++) {
+                    options[i].selected = false;
+                }
+                filterFunc();
+            };
+            div_company_sa.appendChild(reset_company_sa);
         </script>
     </body>
 </html>
